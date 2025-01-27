@@ -75,6 +75,7 @@ const redirectToGoogle = () => {
 .review {
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
   padding: 30px;
   gap: 20px;
@@ -158,7 +159,7 @@ const redirectToGoogle = () => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 268px;
+  min-width: 268px;
 
   @include mixins.onTablet {
     flex-direction: row;
