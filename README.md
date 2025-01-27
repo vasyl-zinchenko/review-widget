@@ -1,6 +1,6 @@
 # REVIEW WIDGET
 
-[DEMO LINK](https://widget-google-review.netlify.app/review)
+[DEMO LINK](https://widget-google-review.netlify.app/)
 
 ## Features
 
