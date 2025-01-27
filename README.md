@@ -42,7 +42,7 @@ The widget supports switching between languages: **UA**/**EN**.
 
 ---
 
-## How to Start the Application
+# How to Start the Application
 
 1. Install dependencies:  
 
