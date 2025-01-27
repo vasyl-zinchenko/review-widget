@@ -4,7 +4,7 @@ import ua from './ua.json';
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'en',
+  locale: 'ua',
   messages: {
     en,
     ua,
