@@ -1,17 +1,11 @@
 import { defineStore } from 'pinia';
+import type { ReviewData } from '@/types/models';
 import { ref } from 'vue';
 
 export const useRatingStore = defineStore('ratingStore', () => {
-  interface reviewData {
-    id: string;
-    createdAt: string;
-    rating: number;
-    reviewsCount: number;
-  }
+  const reviewGoogleData = ref<ReviewData | null>(null);
 
-  const reviewGoogleData = ref<reviewData | null>(null);
-
-  const setReviewGoogleData = (data: reviewData) => {
+  const setReviewGoogleData = (data: ReviewData) => {
     reviewGoogleData.value = data;
   };
 

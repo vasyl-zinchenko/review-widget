@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, ref } from 'vue';
+import { toRefs } from 'vue';
 import filledStar from '@/assets/stars/filled-star.svg';
 import emptyStar from '@/assets/stars/empty-star.svg';
 import halfStar from '@/assets/stars/half-star.svg';
@@ -39,7 +39,7 @@ const getStarType = (starIndex: number): string => {
   }
 };
 
-const changeRating = (value) => {
+const changeRating = (value: number) => {
   if (isChangeableRating.value) {
     emit('change', value);
   }

@@ -34,7 +34,7 @@
       >
     </div>
   </div>
-	
+
   <ModalWindow
     v-if="openModal"
     @close="openModal = false"
@@ -45,14 +45,9 @@
 
 <script setup lang="ts">
 import { toRefs, ref, computed } from 'vue';
-import { useRouter } from 'vue-router';
 import Button from '@/components/Button.vue';
 import ModalWindow from '@/components/modals/ModalWindow.vue';
 import RatingStars from '@/components/RatingStars.vue';
-import filledStar from '@/assets/stars/filled-star.svg';
-import emptyStar from '@/assets/stars/empty-star.svg';
-import halfStar from '@/assets/stars/half-star.svg';
-import { useRatingStore } from '@/store/ratingStore';
 
 interface Props {
   rating: number;
@@ -63,9 +58,6 @@ interface Props {
 
 const props = defineProps<Props>();
 const { icon, title, rating, reviewsCount } = toRefs(props);
-
-const router = useRouter();
-const ratingStore = useRatingStore();
 
 const openModal = ref(false);
 

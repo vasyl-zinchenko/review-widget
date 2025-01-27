@@ -17,7 +17,7 @@ export function useFetch<T>() {
       const options: RequestInit = {
         method: method,
         headers: {
-          'Content-Type': 'application/json',
+          'content-Type': 'application/json',
         },
       };
 

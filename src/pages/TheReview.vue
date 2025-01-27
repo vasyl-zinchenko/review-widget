@@ -10,14 +10,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
+import type { ReviewData } from '@/types/models';
 import ReviewWidget from '@/components/ReviewWidget.vue';
 import googleIcon from '@/assets/google.svg';
 import { useFetch } from '@/composables/useFetch';
 import { useRatingStore } from '@/store/ratingStore';
 const ratingStore = useRatingStore();
 
-const { data, fetchData } = useFetch();
+const { data, fetchData } = useFetch<ReviewData[]>();
 
 const loadReviews = async () => {
   await fetchData(

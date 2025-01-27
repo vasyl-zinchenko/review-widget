@@ -32,7 +32,7 @@
               {{ $t('buttons.cancel') }}
             </Button>
 
-            <Button type="submit" :variant="'save'" :disabled="rating === 0">
+            <Button type="submit" :variant="'save'" :disabled="newRating === 0">
               {{ $t('buttons.publish') }}
             </Button>
           </div>
@@ -44,10 +44,9 @@
 
 <script setup lang="ts">
 import { toRefs, ref } from 'vue';
-
+import type { ReviewData } from '@/types/models';
 import Button from '@/components/Button.vue';
 import RatingStars from '@/components/RatingStars.vue';
-import googleIcon from '@/assets/google.svg';
 
 import { useFetch } from '@/composables/useFetch';
 import { useRatingStore } from '@/store/ratingStore';
@@ -58,7 +57,7 @@ interface Props {
 }
 
 const emits = defineEmits<{
-  close: () => void;
+  (e: 'close'): void;
 }>();
 
 const props = defineProps<Props>();
@@ -73,16 +72,6 @@ const newRating = ref(0);
 const setRating = (value: number) => (newRating.value = value);
 
 const closeModal = () => emits('close');
-
-const getStarType = (starIndex: number): string => {
-  if (newRating.value >= starIndex) {
-    return filledStar;
-  } else if (newRating.value > starIndex - 1) {
-    return halfStar;
-  } else {
-    return emptyStar;
-  }
-};
 
 const postReview = async () => {
   const payload = {
@@ -99,13 +88,9 @@ const postReview = async () => {
 
   if (error.value) return;
 
-  if (data.value) ratingStore.setReviewGoogleData(data.value);
+  if (data.value) ratingStore.setReviewGoogleData(data.value as ReviewData);
 
   closeModal();
-};
-
-const sendReview = async () => {
-  await postReview();
 };
 </script>
 
