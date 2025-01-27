@@ -1,0 +1,15 @@
+{
+  "labels": {
+    "ourCustomersReviewsOnGoogle": "Our customers' reviews on Google",
+    "reviews": "reviews",
+    "newReview": "New review",
+    "somethingWentWrong": "Something went wrong, try later!",
+    "shareYourImpressions": "Share your impressions of this place"
+  },
+  "buttons": {
+    "view": "View",
+    "write": "Write",
+    "publish": "Publish",
+    "cancel": "Cancel"
+  }
+}

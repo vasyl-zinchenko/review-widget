@@ -1,0 +1,15 @@
+{
+  "labels": {
+    "ourCustomersReviewsOnGoogle": "Відгуки наших клієнтів у Google",
+    "reviews": "відгуки",
+    "newReview": "Новий відгук",
+    "somethingWentWrong": "Щось пішло не так, спробуйте пізніше!",
+    "shareYourImpressions": "Поділіться враженнями про це місце"
+  },
+  "buttons": {
+    "view": "Переглянути",
+    "write": "Написати",
+    "publish": "Опублікувати",
+    "cancel": "Скасувати"
+  }
+}
